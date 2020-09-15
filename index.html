@@ -66,10 +66,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 	margin: 20px auto 0;
 	width: 200px;
 	text-align: center;
-	color: rgb(179, 179, 179);
-	fill: rgb(179, 179, 179);
+	color: #333333;
+	fill: #333333;
 }html body.tc-body {
-  background: rgb(26, 26, 26);
+  background: #ffffff;
 }
 .line-wrapper {
   width: 100%;
@@ -82,7 +82,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 .line {
   width: 50px;
   height: 1px;
-  background: rgb(255, 255, 255);
+  background: #999999;
   -webkit-animation: line 2s infinite; 
   -moz-animation: line 2s infinite; 
   -o-animation: line 2s infinite; 
@@ -101,7 +101,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 .linetwo {
   width: 50px;
   height: 1px;
-  background: rgb(255, 255, 255);
+  background: #999999;
   -webkit-animation: linetwo 2s infinite; 
   -moz-animation: linetwo 2s infinite; 
   -o-animation: linetwo 2s infinite; 
@@ -121,7 +121,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 .linethree {
   width: 50px;
   height: 1px;
-  background: rgb(255, 255, 255);
+  background: #999999;
   -webkit-animation: linethree 2s infinite; 
   -moz-animation: linethree 2s infinite; 
   -o-animation: linethree 2s infinite; 
@@ -146,7 +146,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 </div></div>
 <!--~~ Static styles ~~-->
 <div id="styleArea">
-<style data-tiddler-title="$:/boot/boot.css" data-tiddler-type="text/css" data-tiddler-revision="0" data-tiddler-bag="default" type="text/css">/*
+<style data-tiddler-bag="default" data-tiddler-revision="0" data-tiddler-title="$:/boot/boot.css" data-tiddler-type="text/css" type="text/css">/*
 Basic styles used before we boot up the parsing engine
 */
 
@@ -249,6 +249,8 @@ Error message and password prompt
 
 <li>$:/ak/plugins/TWCrossLinks</li>
 
+<li>$:/config/DownloadSaver/AutoSave</li>
+
 <li>$:/config/EditorTypeMappings/text/vnd.tiddlywiki</li>
 
 <li>$:/config/EmptyStoryMessage</li>
@@ -311,6 +313,14 @@ Error message and password prompt
 
 <li>$:/drift/side-by-side</li>
 
+<li>$:/GitHub/Filename</li>
+
+<li>$:/GitHub/Path</li>
+
+<li>$:/GitHub/Repo</li>
+
+<li>$:/GitHub/Username</li>
+
 <li>$:/isEncrypted</li>
 
 <li>$:/jd/palette/C8Dark</li>
@@ -335,11 +345,21 @@ Error message and password prompt
 
 <li>$:/SplashScreen</li>
 
+<li>$:/state/tab--1963855381</li>
+
+<li>$:/state/tab--2112689675</li>
+
+<li>$:/state/tab-1749438307</li>
+
+<li>$:/state/tab-2065006209</li>
+
 <li>$:/status/RequireReloadDueToPluginChange</li>
 
 <li>$:/StoryList</li>
 
 <li>$:/tags/SideBarSegment</li>
+
+<li>$:/temp/info-plugin</li>
 
 <li>$:/Temp/newlink</li>
 
@@ -375,6 +395,10 @@ Error message and password prompt
 
 <li>$:/view</li>
 
+<li>TiddlyWiki</li>
+
+<li>Welcome to Drift</li>
+
 </ul>
 </p>
 
@@ -389,7 +413,7 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
-<div created="20141202200448128" creator="Tobias Beer" modified="20200429103629593" modifier="Tobias Beer" summary="the [[list-search]] macro allows to filter list outputs" tags="$:/tags/Macro" title="$:/.tb/macros/list-search" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20141202200448128" creator="Tobias Beer" modified="20200429103629593" modifier="Tobias Beer" revision="0" summary="the [[list-search]] macro allows to filter list outputs" tags="$:/tags/Macro" title="$:/.tb/macros/list-search" type="text/vnd.tiddlywiki">
 <pre>\define list-search(
 filter:&quot;[tags[]]&quot;,
 search:&quot;search:title&quot;,
@@ -416,7 +440,7 @@ placeholder=&quot;$placeholder$&quot;/&gt;
 &lt;/$reveal&gt;
 \end</pre>
 </div>
-<div caption="In Fields" created="20141231095518178" creator="Tobias Beer" list-before="$:/core/ui/AdvancedSearch/Filter" modified="20200429103529756" modifier="Tobias Beer" tags="$:/tags/AdvancedSearch" title="$:/.tb/ui/AdvancedSearch/Field" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" caption="In Fields" created="20141231095518178" creator="Tobias Beer" list-before="$:/core/ui/AdvancedSearch/Filter" modified="20200429103529756" modifier="Tobias Beer" revision="0" tags="$:/tags/AdvancedSearch" title="$:/.tb/ui/AdvancedSearch/Field" type="text/vnd.tiddlywiki">
 <pre>\define searchInField(field, for, ci)
 &lt;$list filter=&quot;[!is[shadow]!is[system]regexp:$field$[$for$$ci$]limit[1]]&quot;&gt;
 &lt;dt&gt;$field$&lt;/dt&gt;
@@ -465,7 +489,7 @@ Search in fields... &amp;nbsp; &lt;span class=&quot;tc-advanced-search-check&quo
 &lt;/$reveal&gt;
 &lt;/$reveal&gt;</pre>
 </div>
-<div created="20200518090028282" description="Collect. Organize. Grow. your ideas" list="changelog" modified="20200716095134332" name="Drift" plugin-priority="1" plugin-type="plugin" tags="" title="$:/ak/drift" type="application/json" version="0.3.0" revision="0" bag="default">
+<div bag="default" created="20200518090028282" description="Collect. Organize. Grow. your ideas" list="changelog" modified="20200716095134332" name="Drift" plugin-priority="1" plugin-type="plugin" revision="0" tags="" title="$:/ak/drift" type="application/json" version="0.3.0">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/ak/drift/macros/cross-list-links-draggable&quot;: {
@@ -632,7 +656,7 @@ Search in fields... &amp;nbsp; &lt;span class=&quot;tc-advanced-search-check&quo
     }
 }</pre>
 </div>
-<div created="20200518090927118" modified="20200525183414159" title="$:/ak/drift/changelog" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200518090927118" modified="20200525183414159" revision="0" title="$:/ak/drift/changelog" type="text/vnd.tiddlywiki">
 <pre>''v0.2.0'' - 2020-05-25
 
 * Drift has now a &quot;side-by-side&quot; view option, not as elegant as a real 2 stories but it works for now
@@ -685,7 +709,7 @@ Search in fields... &amp;nbsp; &lt;span class=&quot;tc-advanced-search-check&quo
 
 *Initial release</pre>
 </div>
-<div created="20200509172404131" creator="akhater" description="Interstitial Journaling Plugin" list="readme change.log" modified="20200716095220237" modifier="akhater" name="DailyNotes" plugin-type="plugin" title="$:/ak/plugins/DailyNotes" type="application/json" version="0.0.33" revision="0" bag="default">
+<div bag="default" created="20200509172404131" creator="akhater" description="Interstitial Journaling Plugin" list="readme change.log" modified="20200716095220237" modifier="akhater" name="DailyNotes" plugin-type="plugin" revision="0" title="$:/ak/plugins/DailyNotes" type="application/json" version="0.0.33">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/ak/plugins/DailyNotes/change.log&quot;: {
@@ -908,29 +932,29 @@ Search in fields... &amp;nbsp; &lt;span class=&quot;tc-advanced-search-check&quo
     }
 }</pre>
 </div>
-<div created="20200513073752237" modified="20200604100726415" title="$:/ak/plugins/DailyNotes/DN-Selection" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200513073752237" modified="20200604100726415" revision="0" title="$:/ak/plugins/DailyNotes/DN-Selection" type="text/vnd.tiddlywiki">
 <pre>20200604</pre>
 </div>
-<div created="20200604100614855" modified="20200604100726478" title="$:/ak/plugins/DailyNotes/DN-timeTiddler/20200604" type="application/json" revision="0" bag="default">
+<div bag="default" created="20200604100614855" modified="20200604100726478" revision="0" title="$:/ak/plugins/DailyNotes/DN-timeTiddler/20200604" type="application/json">
 <pre>{
     &quot;20200604100613847&quot;: &quot;13:06&quot;,
     &quot;20200604100725569&quot;: &quot;13:07&quot;
 }</pre>
 </div>
-<div created="20200604100630211" done="" modified="20200604100632049" pending="20200604100613847" title="$:/ak/plugins/DailyNotes/Tasks/Lists/inbox" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200604100630211" done="" modified="20200604100632049" pending="20200604100613847" revision="0" title="$:/ak/plugins/DailyNotes/Tasks/Lists/inbox" type="text/vnd.tiddlywiki">
 <pre></pre>
 </div>
-<div created="20200604100630210" modified="20200604100632014" title="$:/ak/plugins/DailyNotes/Tasks/Status/202006" type="application/json" revision="0" bag="default">
+<div bag="default" created="20200604100630210" modified="20200604100632014" revision="0" title="$:/ak/plugins/DailyNotes/Tasks/Status/202006" type="application/json">
 <pre>{
     &quot;20200604100613847&quot;: &quot;pending&quot;
 }</pre>
 </div>
-<div created="20200518082710088" modified="20200518083051651" title="$:/ak/plugins/DailyNotes/todoStatus" type="application/json" revision="0" bag="default">
+<div bag="default" created="20200518082710088" modified="20200518083051651" revision="0" title="$:/ak/plugins/DailyNotes/todoStatus" type="application/json">
 <pre>{
     &quot;2020-05-18~''20:27''I support not todo lists&quot;: &quot;&quot;
 }</pre>
 </div>
-<div created="20200502092707287" description="Discover all your intra tiddlers links" list="config readme change.log" modified="20200522134059275" name="TWCrossLinks" plugin-type="plugin" tags="" title="$:/ak/plugins/TWCrossLinks" type="application/json" version="0.1.19" revision="0" bag="default">
+<div bag="default" created="20200502092707287" description="Discover all your intra tiddlers links" list="config readme change.log" modified="20200522134059275" name="TWCrossLinks" plugin-type="plugin" revision="0" tags="" title="$:/ak/plugins/TWCrossLinks" type="application/json" version="0.1.19">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/ak/plugins/TWCrossLinks/config/default&quot;: {
@@ -1116,85 +1140,88 @@ Search in fields... &amp;nbsp; &lt;span class=&quot;tc-advanced-search-check&quo
     }
 }</pre>
 </div>
-<div created="20200430042143481" modified="20200430042150375" title="$:/config/EditorTypeMappings/text/vnd.tiddlywiki" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div created="20200915141316147" modified="20200915141834686" title="$:/config/DownloadSaver/AutoSave">
+<pre>no</pre>
+</div>
+<div bag="default" created="20200430042143481" modified="20200430042150375" revision="0" title="$:/config/EditorTypeMappings/text/vnd.tiddlywiki" type="text/vnd.tiddlywiki">
 <pre>comptext</pre>
 </div>
-<div created="20190202142826323" creator="jd" modified="20200429115547333" modifier="jd" title="$:/config/EmptyStoryMessage" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20190202142826323" creator="jd" modified="20200429115547333" modifier="jd" revision="0" title="$:/config/EmptyStoryMessage" type="text/vnd.tiddlywiki">
 <pre>{{$:/themes/jd/Mono/EmptyStoryMessage}}</pre>
 </div>
-<div created="20200430205541018" modified="20200430205555685" title="$:/config/jd/mobbutton/visibility/$:/plugins/jd/mob/button/config" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200430205541018" modified="20200430205555685" revision="0" title="$:/config/jd/mobbutton/visibility/$:/plugins/jd/mob/button/config" type="text/vnd.tiddlywiki">
 <pre>show</pre>
 </div>
-<div created="20200430205242113" modified="20200430205552214" title="$:/config/jd/mobbutton/visibility/$:/plugins/jd/mob/button/search" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200430205242113" modified="20200430205552214" revision="0" title="$:/config/jd/mobbutton/visibility/$:/plugins/jd/mob/button/search" type="text/vnd.tiddlywiki">
 <pre>show</pre>
 </div>
-<div created="20200429065440944" modified="20200429065558719" title="$:/config/NewJournal/Text" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200429065440944" modified="20200429065558719" revision="0" title="$:/config/NewJournal/Text" type="text/vnd.tiddlywiki">
 <pre></pre>
 </div>
-<div created="20200429065432054" modified="20200429065541334" title="$:/config/NewJournal/Title" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200429065432054" modified="20200429065541334" revision="0" title="$:/config/NewJournal/Title" type="text/vnd.tiddlywiki">
 <pre>YYYY-0MM-0DD 0hh:0mm </pre>
 </div>
-<div created="20200513075109720" modified="20200513075111701" title="$:/config/PageControlButtons/Visibility/$:/ak/plugins/DailyNotes/buttons/open-DailyNotes" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200513075109720" modified="20200513075111701" revision="0" title="$:/config/PageControlButtons/Visibility/$:/ak/plugins/DailyNotes/buttons/open-DailyNotes" type="text/vnd.tiddlywiki">
 <pre>show</pre>
 </div>
-<div created="20200430205534244" modified="20200430205542249" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/advanced-search" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200430205534244" modified="20200430205542249" revision="0" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/advanced-search" type="text/vnd.tiddlywiki">
 <pre>hide</pre>
 </div>
-<div created="20200429155007805" modified="20200429155012957" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200429155007805" modified="20200429155012957" revision="0" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel" type="text/vnd.tiddlywiki">
 <pre>show</pre>
 </div>
-<div created="20200430213809929" modified="20200430213819418" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/manager" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200430213809929" modified="20200430213819418" revision="0" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/manager" type="text/vnd.tiddlywiki">
 <pre>hide</pre>
 </div>
-<div created="20200428231905599" modified="20200428231910709" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-journal" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200428231905599" modified="20200428231910709" revision="0" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-journal" type="text/vnd.tiddlywiki">
 <pre>show</pre>
 </div>
-<div created="20200430222245661" modified="20200430222252092" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/save-wiki" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200430222245661" modified="20200430222252092" revision="0" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/save-wiki" type="text/vnd.tiddlywiki">
 <pre>show</pre>
 </div>
-<div created="20200430222127753" modified="20200430222134484" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/tag-manager" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200430222127753" modified="20200430222134484" revision="0" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/tag-manager" type="text/vnd.tiddlywiki">
 <pre>hide</pre>
 </div>
-<div created="20200429115212412" modified="20200429115217409" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/unfold-all" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200429115212412" modified="20200429115217409" revision="0" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/unfold-all" type="text/vnd.tiddlywiki">
 <pre>hide</pre>
 </div>
-<div created="20200512113523589" modified="20200512113810295" title="$:/config/Plugins/Disabled/$:/ak/plugins/TWCrossLinks" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200512113523589" modified="20200512113810295" revision="0" title="$:/config/Plugins/Disabled/$:/ak/plugins/TWCrossLinks" type="text/vnd.tiddlywiki">
 <pre>no</pre>
 </div>
-<div created="20200429120310882" modified="20200430205150640" title="$:/config/Plugins/Disabled/$:/plugins/jd/mob" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200429120310882" modified="20200430205150640" revision="0" title="$:/config/Plugins/Disabled/$:/plugins/jd/mob" type="text/vnd.tiddlywiki">
 <pre>no</pre>
 </div>
-<div created="20200428155156560" modified="20200504180159838" title="$:/config/RelinkOnRename" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200428155156560" modified="20200504180159838" revision="0" title="$:/config/RelinkOnRename" type="text/vnd.tiddlywiki">
 <pre>yes</pre>
 </div>
-<div created="20190201102601467" creator="jd" modified="20200502111832827" modifier="jd" title="$:/config/SideBarSegments/Visibility/$:/core/ui/SideBarSegments/page-controls" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20190201102601467" creator="jd" modified="20200502111832827" modifier="jd" revision="0" title="$:/config/SideBarSegments/Visibility/$:/core/ui/SideBarSegments/page-controls" type="text/vnd.tiddlywiki">
 <pre>hide</pre>
 </div>
-<div created="20190201102714829" creator="jd" modified="20200502111835538" modifier="jd" title="$:/config/SideBarSegments/Visibility/$:/core/ui/SideBarSegments/search" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20190201102714829" creator="jd" modified="20200502111835538" modifier="jd" revision="0" title="$:/config/SideBarSegments/Visibility/$:/core/ui/SideBarSegments/search" type="text/vnd.tiddlywiki">
 <pre>hide</pre>
 </div>
-<div created="20190201102652423" creator="jd" modified="20200502113430279" modifier="jd" title="$:/config/SideBarSegments/Visibility/$:/core/ui/SideBarSegments/site-subtitle" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20190201102652423" creator="jd" modified="20200502113430279" modifier="jd" revision="0" title="$:/config/SideBarSegments/Visibility/$:/core/ui/SideBarSegments/site-subtitle" type="text/vnd.tiddlywiki">
 <pre>show</pre>
 </div>
-<div created="20190201102745176" creator="jd" modified="20200502113431530" modifier="jd" title="$:/config/SideBarSegments/Visibility/$:/core/ui/SideBarSegments/site-title" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20190201102745176" creator="jd" modified="20200502113431530" modifier="jd" revision="0" title="$:/config/SideBarSegments/Visibility/$:/core/ui/SideBarSegments/site-title" type="text/vnd.tiddlywiki">
 <pre>show</pre>
 </div>
-<div created="20200429155415046" modified="20200502112110028" title="$:/config/SideBarSegments/Visibility/$:/core/ui/SideBarSegments/tabs" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200429155415046" modified="20200502112110028" revision="0" title="$:/config/SideBarSegments/Visibility/$:/core/ui/SideBarSegments/tabs" type="text/vnd.tiddlywiki">
 <pre>show</pre>
 </div>
-<div created="20200510170911104" modified="20200510170911116" title="$:/config/TextEditor/EditorHeight/Mode" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200510170911104" modified="20200510170911116" revision="0" title="$:/config/TextEditor/EditorHeight/Mode" type="text/vnd.tiddlywiki">
 <pre>fixed</pre>
 </div>
-<div created="20200429115358547" modified="20200429115405543" title="$:/config/topbar/sticky" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200429115358547" modified="20200429115405543" revision="0" title="$:/config/topbar/sticky" type="text/vnd.tiddlywiki">
 <pre>yes</pre>
 </div>
-<div created="20200429115524835" modified="20200429115532675" title="$:/config/TopLeftBar/Button/$:/themes/jd/Mono/Buttons/searchbar" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200429115524835" modified="20200429115532675" revision="0" title="$:/config/TopLeftBar/Button/$:/themes/jd/Mono/Buttons/searchbar" type="text/vnd.tiddlywiki">
 <pre>hide</pre>
 </div>
-<div created="20200429115524829" modified="20200429115536905" title="$:/config/TopRightBar/$:/themes/jd/Mono/TopBarSegments/search" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200429115524829" modified="20200429115536905" revision="0" title="$:/config/TopRightBar/$:/themes/jd/Mono/TopBarSegments/search" type="text/vnd.tiddlywiki">
 <pre>show</pre>
 </div>
-<div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" name="Core" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.22" revision="0" bag="default">
+<div author="JeremyRuston" bag="default" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" name="Core" plugin-priority="0" plugin-type="plugin" revision="0" title="$:/core" type="application/json" version="5.1.22">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/Acknowledgements&quot;: {
@@ -10567,14 +10594,14 @@ Search in fields... &amp;nbsp; &lt;span class=&quot;tc-advanced-search-check&quo
     }
 }</pre>
 </div>
-<div caption="{{$:/language/SideBar/All/Caption}}" created="20141203181017483" creator="Tobias Beer" modified="20200429103848011" modifier="Tobias Beer" tags="$:/tags/MoreSideBar" title="$:/core/ui/MoreSideBar/All" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" caption="{{$:/language/SideBar/All/Caption}}" created="20141203181017483" creator="Tobias Beer" modified="20200429103848011" modifier="Tobias Beer" revision="0" tags="$:/tags/MoreSideBar" title="$:/core/ui/MoreSideBar/All" type="text/vnd.tiddlywiki">
 <pre>&lt;&lt;list-search
 &quot;[!is[system]sort[title]]&quot;
 &quot;search:title&quot;
 &quot;$:/temp/list-search-sidebar-all&quot;
 &quot;$:/core/ui/ListItemTemplate&quot;&gt;&gt;</pre>
 </div>
-<div created="20200429172942326" modified="20200430222342476" tags="$:/tags/ViewTemplate" title="$:/core/ui/ViewTemplate/subtitle" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200429172942326" modified="20200430222342476" revision="0" tags="$:/tags/ViewTemplate" title="$:/core/ui/ViewTemplate/subtitle" type="text/vnd.tiddlywiki">
 <pre>&lt;div class=&quot;tc-subtitle&quot;&gt;
 &lt;$link to={{!!modifier}}&gt;
 &lt;$view field=&quot;modifier&quot;/&gt;
@@ -10584,16 +10611,28 @@ Search in fields... &amp;nbsp; &lt;span class=&quot;tc-advanced-search-check&quo
 &lt;/span&gt;&lt;/$list&gt;
 &lt;/div&gt;</pre>
 </div>
-<div created="20200429055511434" modified="20200501215527527" title="$:/DefaultTiddlers" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200429055511434" modified="20200501215527527" revision="0" title="$:/DefaultTiddlers" type="text/vnd.tiddlywiki">
 <pre>[[Welcome to Drift]]</pre>
 </div>
-<div caption="Pinned" created="20200525062621816" creator="akhater" modified="20200525183816876" modifier="akhater" tags="" title="$:/drift/side-by-side" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" caption="Pinned" created="20200525062621816" creator="akhater" modified="20200525183816876" modifier="akhater" revision="0" tags="" title="$:/drift/side-by-side" type="text/vnd.tiddlywiki">
 <pre></pre>
 </div>
-<div title="$:/isEncrypted" revision="0" bag="default">
+<div created="20200915113626996" modified="20200915113630844" title="$:/GitHub/Filename">
+<pre>index.html</pre>
+</div>
+<div created="20200915141906666" modified="20200915142048368" title="$:/GitHub/Path">
+<pre>/</pre>
+</div>
+<div created="20200915113618140" modified="20200915142046544" title="$:/GitHub/Repo">
+<pre>fraserlangham/fraserlangham.github.io</pre>
+</div>
+<div created="20200915113612252" modified="20200915113614179" title="$:/GitHub/Username">
+<pre>fraserlangham</pre>
+</div>
+<div bag="default" revision="0" title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div caption="C8 Dark" created="20171016144617864" creator="JD" description="Dark and unobtrusive" modified="20200429113909734" modifier="jd" name="C8 Dark" tags="$:/tags/Palette" title="$:/jd/palette/C8Dark" type="application/x-tiddler-dictionary" revision="0" bag="default">
+<div bag="default" caption="C8 Dark" created="20171016144617864" creator="JD" description="Dark and unobtrusive" modified="20200429113909734" modifier="jd" name="C8 Dark" revision="0" tags="$:/tags/Palette" title="$:/jd/palette/C8Dark" type="application/x-tiddler-dictionary">
 <pre>alert-background: #644a7d
 alert-border: #644a7d
 alert-highlight: &lt;&lt;colour primary&gt;&gt;
@@ -10698,7 +10737,7 @@ toolbar-done-button:
 untagged-background: #644a7d
 very-muted-foreground: rgba(255,255,255,0.2)</pre>
 </div>
-<div caption="Neonize" created="20171022175917849" creator="JD" description="Darkly colorful" modified="20200429113909781" modifier="jd" name="Neonize" tags="$:/tags/Palette" title="$:/jd/palette/Neonize" type="application/x-tiddler-dictionary" revision="0" bag="default">
+<div bag="default" caption="Neonize" created="20171022175917849" creator="JD" description="Darkly colorful" modified="20200429113909781" modifier="jd" name="Neonize" revision="0" tags="$:/tags/Palette" title="$:/jd/palette/Neonize" type="application/x-tiddler-dictionary">
 <pre>alert-background: #644a7d
 alert-border: #644a7d
 alert-highlight: &lt;&lt;colour primary&gt;&gt;
@@ -10803,7 +10842,7 @@ toolbar-done-button:
 untagged-background: #3a3a3a
 very-muted-foreground: rgba(255,255,255,0.2)</pre>
 </div>
-<div caption="Spartan Night" created="20180624055725870" creator="jd" description="Spartan night colors" modified="20200429113909814" modifier="jd" name="Spartan Night" tags="$:/tags/Palette" title="$:/jd/palette/SpartanNight" type="application/x-tiddler-dictionary" revision="0" bag="default">
+<div bag="default" caption="Spartan Night" created="20180624055725870" creator="jd" description="Spartan night colors" modified="20200429113909814" modifier="jd" name="Spartan Night" revision="0" tags="$:/tags/Palette" title="$:/jd/palette/SpartanNight" type="application/x-tiddler-dictionary">
 <pre>alert-background: &lt;&lt;colour background&gt;&gt;
 alert-border: &lt;&lt;colour very-muted-foreground&gt;&gt;
 alert-highlight: &lt;&lt;colour very-muted-foreground&gt;&gt;
@@ -10908,10 +10947,10 @@ toolbar-done-button:
 untagged-background: &lt;&lt;colour very-muted-foreground&gt;&gt;
 very-muted-foreground: rgba(255, 255, 255, 0.12)</pre>
 </div>
-<div created="20190202142805411" creator="jd" modified="20200518103937609" modifier="jd" title="$:/palette" type="text/vnd.tiddlywiki" revision="0" bag="default">
-<pre>$:/palettes/Twilight</pre>
+<div bag="default" created="20190202142805411" creator="jd" modified="20200915113644484" modifier="jd" revision="0" title="$:/palette" type="text/vnd.tiddlywiki">
+<pre>$:/palettes/Blanca</pre>
 </div>
-<div caption="{{$:/core/images/advanced-search-button}} search" created="20171122115403541" creator="JD" description="Toggle searchbar visibility" modified="20200430205248593" modifier="JD" tags="$:/tags/jd/mobbutton" title="$:/plugins/jd/mob/button/search" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" caption="{{$:/core/images/advanced-search-button}} search" created="20171122115403541" creator="JD" description="Toggle searchbar visibility" modified="20200430205248593" modifier="JD" revision="0" tags="$:/tags/jd/mobbutton" title="$:/plugins/jd/mob/button/search" type="text/vnd.tiddlywiki">
 <pre>&lt;$reveal type=&quot;nomatch&quot; state=&quot;$:/plugins/jd/mob/config/config##searchbar&quot; text=&quot;yes&quot;&gt;
 &lt;$button class=&quot;tc-btn-invisible&quot; tooltip=&quot;Show searchbar&quot; set=&quot;$:/plugins/jd/mob/config/config##searchbar&quot; setTo=&quot;yes&quot;&gt;
 &lt;&lt;jdconfig topbar search&gt;&gt;
@@ -10925,7 +10964,7 @@ very-muted-foreground: rgba(255, 255, 255, 0.12)</pre>
 &lt;/$button&gt;
 &lt;/$reveal&gt;</pre>
 </div>
-<div created="20171109145547252" creator="JD" modified="20200501065729853" modifier="JD" title="$:/plugins/jd/mob/config/config" type="application/x-tiddler-dictionary" revision="0" bag="default">
+<div bag="default" created="20171109145547252" creator="JD" modified="20200501065729853" modifier="JD" revision="0" title="$:/plugins/jd/mob/config/config" type="application/x-tiddler-dictionary">
 <pre>freshinstall: yes
 defaultconfirm: cancel
 configtype: list
@@ -10953,7 +10992,7 @@ barpreset4ops: hide
 searchbutton: simple
 focus: show</pre>
 </div>
-<div author="AlainD" core-version="&gt;=5.1.13" created="20200501082350794" dependents="" description="Editor with some on-line completion capabilities" list="readme usage examples" modified="20200501082350794" plugin-type="plugin" source="https://github.com/snowgoon88/TW5-extendedit" title="$:/plugins/snowgoon88/edit-comptext" type="application/json" version="0.9.0" revision="0" bag="default">
+<div author="AlainD" bag="default" core-version="&gt;=5.1.13" created="20200501082350794" dependents="" description="Editor with some on-line completion capabilities" list="readme usage examples" modified="20200501082350794" plugin-type="plugin" revision="0" source="https://github.com/snowgoon88/TW5-extendedit" title="$:/plugins/snowgoon88/edit-comptext" type="application/json" version="0.9.0">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/plugins/snowgoon88/edit-comptext/config&quot;: {
@@ -11012,7 +11051,7 @@ focus: show</pre>
     }
 }</pre>
 </div>
-<div author="Joao Bolila" dependents="" description="Highlight.js syntax highlighting" list="readme usage howto license" name="Highlight" plugin-type="plugin" title="$:/plugins/tiddlywiki/highlight" type="application/json" version="5.1.22" revision="0" bag="default">
+<div author="Joao Bolila" bag="default" dependents="" description="Highlight.js syntax highlighting" list="readme usage howto license" name="Highlight" plugin-type="plugin" revision="0" title="$:/plugins/tiddlywiki/highlight" type="application/json" version="5.1.22">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/plugins/tiddlywiki/highlight/highlight.js&quot;: {
@@ -11082,13 +11121,13 @@ focus: show</pre>
     }
 }</pre>
 </div>
-<div created="20200425222551847" modified="20200501083154089" title="$:/SiteSubtitle" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200425222551847" modified="20200501083154089" revision="0" title="$:/SiteSubtitle" type="text/vnd.tiddlywiki">
 <pre>Collect. Organize. Grow.</pre>
 </div>
-<div created="20200425222530021" modified="20200501124300915" title="$:/SiteTitle" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200425222530021" modified="20200501124300915" revision="0" title="$:/SiteTitle" type="text/vnd.tiddlywiki">
 <pre>Drift</pre>
 </div>
-<div created="20200429115255034" modified="20200501210623686" tags="$:/tags/RawMarkupWikified/TopBody" title="$:/SplashScreen" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200429115255034" modified="20200501210623686" revision="0" tags="$:/tags/RawMarkupWikified/TopBody" title="$:/SplashScreen" type="text/vnd.tiddlywiki">
 <pre>\import [[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
 \rules only filteredtranscludeinline transcludeinline macrocallinline
 &lt;div class=&quot;tc-remove-when-wiki-loaded&quot;&gt;
@@ -11187,22 +11226,92 @@ html body.tc-body {
 
 &lt;/div&gt;</pre>
 </div>
-<div title="$:/status/RequireReloadDueToPluginChange" revision="0" bag="default">
+<div created="20200915113643763" modified="20200915113643763" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Palette</pre>
+</div>
+<div created="20200915141059396" modified="20200915141059396" title="$:/state/tab--2112689675">
+<pre>$:/core/ui/ControlPanel/Advanced</pre>
+</div>
+<div created="20200915113604724" modified="20200915141106862" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Saving</pre>
+</div>
+<div created="20200915113607105" modified="20200915142103056" title="$:/state/tab-2065006209">
+<pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
+</div>
+<div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="[[Welcome to Drift]]" title="$:/StoryList" revision="1" bag="default">
+<div created="20200915113602796" list="$:/ControlPanel TiddlyWiki [[Welcome to Drift]]" modified="20200915142106037" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20200502112123171" list="$:/core/ui/SideBarSegments/site-title $:/core/ui/SideBarSegments/site-subtitle $:/core/ui/SideBarSegments/page-controls $:/core/ui/SideBarSegments/search $:/core/ui/SideBarSegments/tabs" modified="20200502112123186" title="$:/tags/SideBarSegment" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200502112123171" list="$:/core/ui/SideBarSegments/site-title $:/core/ui/SideBarSegments/site-subtitle $:/core/ui/SideBarSegments/page-controls $:/core/ui/SideBarSegments/search $:/core/ui/SideBarSegments/tabs" modified="20200502112123186" revision="0" title="$:/tags/SideBarSegment" type="text/vnd.tiddlywiki">
 <pre></pre>
 </div>
-<div created="20200430104537151" modified="20200430104545533" title="$:/Temp/newlink" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/info/browser&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser&quot;,
+            &quot;text&quot;: &quot;yes&quot;
+        },
+        &quot;$:/info/node&quot;: {
+            &quot;title&quot;: &quot;$:/info/node&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        },
+        &quot;$:/info/url/full&quot;: {
+            &quot;title&quot;: &quot;$:/info/url/full&quot;,
+            &quot;text&quot;: &quot;https://fraserlangham.github.io/&quot;
+        },
+        &quot;$:/info/url/host&quot;: {
+            &quot;title&quot;: &quot;$:/info/url/host&quot;,
+            &quot;text&quot;: &quot;fraserlangham.github.io&quot;
+        },
+        &quot;$:/info/url/hostname&quot;: {
+            &quot;title&quot;: &quot;$:/info/url/hostname&quot;,
+            &quot;text&quot;: &quot;fraserlangham.github.io&quot;
+        },
+        &quot;$:/info/url/protocol&quot;: {
+            &quot;title&quot;: &quot;$:/info/url/protocol&quot;,
+            &quot;text&quot;: &quot;https:&quot;
+        },
+        &quot;$:/info/url/port&quot;: {
+            &quot;title&quot;: &quot;$:/info/url/port&quot;,
+            &quot;text&quot;: &quot;&quot;
+        },
+        &quot;$:/info/url/pathname&quot;: {
+            &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
+            &quot;text&quot;: &quot;/&quot;
+        },
+        &quot;$:/info/url/search&quot;: {
+            &quot;title&quot;: &quot;$:/info/url/search&quot;,
+            &quot;text&quot;: &quot;&quot;
+        },
+        &quot;$:/info/url/origin&quot;: {
+            &quot;title&quot;: &quot;$:/info/url/origin&quot;,
+            &quot;text&quot;: &quot;https://fraserlangham.github.io&quot;
+        },
+        &quot;$:/info/browser/screen/width&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
+            &quot;text&quot;: &quot;1920&quot;
+        },
+        &quot;$:/info/browser/screen/height&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
+            &quot;text&quot;: &quot;1080&quot;
+        },
+        &quot;$:/info/browser/language&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/language&quot;,
+            &quot;text&quot;: &quot;en&quot;
+        }
+    }
+}</pre>
+</div>
+<div bag="default" created="20200430104537151" modified="20200430104545533" revision="0" title="$:/Temp/newlink" type="text/vnd.tiddlywiki">
 <pre>New Tiddler 10</pre>
 </div>
-<div created="20190202142800922" creator="jd" modified="20200430210323808" modifier="jd" title="$:/theme" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20190202142800922" creator="jd" modified="20200430210323808" modifier="jd" revision="0" title="$:/theme" type="text/vnd.tiddlywiki">
 <pre>$:/themes/jd/Mono</pre>
 </div>
-<div author="JD" core-version="&gt;=5.1.19" created="20190202102252527" creator="jd" dependents="$:/themes/tiddlywiki/vanilla" description="For writing long texts" list="contents" modified="20200429114215254" modifier="jd" name="Mono" plugin-type="theme" source="http://j.d.mono.tiddlyspot.com" title="$:/themes/jd/Mono" type="application/json" version="1.0.32" revision="0" bag="default">
+<div author="JD" bag="default" core-version="&gt;=5.1.19" created="20190202102252527" creator="jd" dependents="$:/themes/tiddlywiki/vanilla" description="For writing long texts" list="contents" modified="20200429114215254" modifier="jd" name="Mono" plugin-type="theme" revision="0" source="http://j.d.mono.tiddlyspot.com" title="$:/themes/jd/Mono" type="application/json" version="1.0.32">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/themes/jd/Mono/TopBarSegments/search&quot;: {
@@ -11439,7 +11548,7 @@ html body.tc-body {
     }
 }</pre>
 </div>
-<div created="20190202114537700" creator="jd" list="$:/core/ui/Buttons/new-tiddler $:/core/ui/Buttons/control-panel $:/core/ui/Buttons/save-wiki $:/core/ui/Buttons/new-journal $:/ak/plugins/DailyNotes/buttons/open-DailyNotes $:/themes/jd/Mono/Buttons/switch-palette $:/themes/jd/Mono/Buttons/searchbar $:/core/ui/TopBar/menu" modified="20200520045045136" modifier="jd" tags="" title="$:/themes/jd/Mono/Database" type="application/json" revision="0" bag="default">
+<div bag="default" created="20190202114537700" creator="jd" list="$:/core/ui/Buttons/new-tiddler $:/core/ui/Buttons/control-panel $:/core/ui/Buttons/save-wiki $:/core/ui/Buttons/new-journal $:/ak/plugins/DailyNotes/buttons/open-DailyNotes $:/themes/jd/Mono/Buttons/switch-palette $:/themes/jd/Mono/Buttons/searchbar $:/core/ui/TopBar/menu" modified="20200520045045136" modifier="jd" revision="0" tags="" title="$:/themes/jd/Mono/Database" type="application/json">
 <pre>{
     &quot;grid-sticky-header-background&quot;: &quot;&lt;&lt;colour page-background&gt;&gt;&quot;,
     &quot;grid-item-background&quot;: &quot;&lt;&lt;colour background&gt;&gt;&quot;,
@@ -11453,7 +11562,7 @@ html body.tc-body {
     &quot;button-fontscroller&quot;: &quot;hide&quot;
 }</pre>
 </div>
-<div caption="Spartan Night" created="20180624055725870" creator="jd" description="Spartan night colors" modified="20200429170233381" modifier="jd" name="Spartan Night" tags="$:/tags/Palette" title="$:/themes/jd/Mono/Palette/SpartanNight" type="application/x-tiddler-dictionary" revision="0" bag="default">
+<div bag="default" caption="Spartan Night" created="20180624055725870" creator="jd" description="Spartan night colors" modified="20200429170233381" modifier="jd" name="Spartan Night" revision="0" tags="$:/tags/Palette" title="$:/themes/jd/Mono/Palette/SpartanNight" type="application/x-tiddler-dictionary">
 <pre>alert-background: &lt;&lt;colour background&gt;&gt;
 alert-border: &lt;&lt;colour very-muted-foreground&gt;&gt;
 alert-highlight: &lt;&lt;colour very-muted-foreground&gt;&gt;
@@ -11558,7 +11667,7 @@ toolbar-done-button:
 untagged-background: &lt;&lt;colour very-muted-foreground&gt;&gt;
 very-muted-foreground: rgba(255, 255, 255, 0.12)</pre>
 </div>
-<div created="20190130145325995" creator="jd" modified="20200518113600856" modifier="jd" tags="$:/tags/Stylesheet" title="$:/themes/jd/Mono/Stylesheet" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20190130145325995" creator="jd" modified="20200518113600856" modifier="jd" revision="0" tags="$:/tags/Stylesheet" title="$:/themes/jd/Mono/Stylesheet" type="text/vnd.tiddlywiki">
 <pre>\define bkrpnt() {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}
 \define sidebar() {{$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth}}
 \define fontsize() {{$:/themes/tiddlywiki/vanilla/metrics/fontsize}}
@@ -12221,7 +12330,7 @@ div::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.12); }
     border-radius: 1px;
 }</pre>
 </div>
-<div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.22" revision="0" bag="default">
+<div author="JeremyRuston" bag="default" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" revision="0" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.22">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/themes/tiddlywiki/snowwhite/base&quot;: {
@@ -12232,7 +12341,7 @@ div::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.12); }
     }
 }</pre>
 </div>
-<div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="Basic theme" name="Vanilla" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/vanilla" type="application/json" version="5.1.22" revision="0" bag="default">
+<div author="JeremyRuston" bag="default" core-version="&gt;=5.0.0" dependents="" description="Basic theme" name="Vanilla" plugin-priority="0" plugin-type="theme" revision="0" title="$:/themes/tiddlywiki/vanilla" type="application/json" version="5.1.22">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/themes/tiddlywiki/vanilla/base&quot;: {
@@ -12330,32 +12439,38 @@ div::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.12); }
     }
 }</pre>
 </div>
-<div created="20200429120249364" modified="20200429120254761" title="$:/themes/tiddlywiki/vanilla/metrics/bodyfontsize" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200429120249364" modified="20200429120254761" revision="0" title="$:/themes/tiddlywiki/vanilla/metrics/bodyfontsize" type="text/vnd.tiddlywiki">
 <pre>14px</pre>
 </div>
-<div created="20200429120249365" modified="20200429120254838" title="$:/themes/tiddlywiki/vanilla/metrics/bodylineheight" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200429120249365" modified="20200429120254838" revision="0" title="$:/themes/tiddlywiki/vanilla/metrics/bodylineheight" type="text/vnd.tiddlywiki">
 <pre>1.25</pre>
 </div>
-<div created="20200429111423592" modified="20200429111443356" title="$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200429111423592" modified="20200429111443356" revision="0" title="$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint" type="text/vnd.tiddlywiki">
 <pre>960px</pre>
 </div>
-<div created="20200429111445661" modified="20200525183816650" title="$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200429111445661" modified="20200525183816650" revision="0" title="$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth" type="text/vnd.tiddlywiki">
 <pre>350px</pre>
 </div>
-<div created="20200429111509358" modified="20200429111744640" title="$:/themes/tiddlywiki/vanilla/metrics/storyright" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200429111509358" modified="20200429111744640" revision="0" title="$:/themes/tiddlywiki/vanilla/metrics/storyright" type="text/vnd.tiddlywiki">
 <pre>770px</pre>
 </div>
-<div created="20200429111514592" modified="20200429111746064" title="$:/themes/tiddlywiki/vanilla/metrics/storywidth" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200429111514592" modified="20200429111746064" revision="0" title="$:/themes/tiddlywiki/vanilla/metrics/storywidth" type="text/vnd.tiddlywiki">
 <pre>770px</pre>
 </div>
-<div created="20200429112820301" modified="20200429115704952" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200429112820301" modified="20200429115704952" revision="0" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout" type="text/vnd.tiddlywiki">
 <pre>fluid-fixed</pre>
 </div>
-<div created="20200429112839464" modified="20200429112848984" title="$:/themes/tiddlywiki/vanilla/options/stickytitles" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200429112839464" modified="20200429112848984" revision="0" title="$:/themes/tiddlywiki/vanilla/options/stickytitles" type="text/vnd.tiddlywiki">
 <pre>no</pre>
 </div>
-<div created="20200429143346003" modified="20200518215459154" title="$:/view" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div bag="default" created="20200429143346003" modified="20200518215459154" revision="0" title="$:/view" type="text/vnd.tiddlywiki">
 <pre>zoomin</pre>
+</div>
+<div created="20200915142117475" modified="20200915142119659" title="TiddlyWiki">
+<pre>test</pre>
+</div>
+<div created="20200915113654068" modified="20200915141934788" title="Welcome to Drift">
+<pre>This is a draft. </pre>
 </div>
 
 
@@ -12364,7 +12479,7 @@ div::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.12); }
 
 <!--~~ Library modules ~~-->
 <div id="libraryModules" style="display:none;">
-<script data-tiddler-library="yes" data-tiddler-title="$:/library/sjcl.js" data-tiddler-type="application/javascript" data-tiddler-revision="0" data-tiddler-bag="default" type="text/javascript">"use strict";var sjcl={cipher:{},hash:{},keyexchange:{},mode:{},misc:{},codec:{},exception:{corrupt:function(a){this.toString=function(){return"CORRUPT: "+this.message};this.message=a},invalid:function(a){this.toString=function(){return"INVALID: "+this.message};this.message=a},bug:function(a){this.toString=function(){return"BUG: "+this.message};this.message=a},notReady:function(a){this.toString=function(){return"NOT READY: "+this.message};this.message=a}}};
+<script data-tiddler-bag="default" data-tiddler-library="yes" data-tiddler-revision="0" data-tiddler-title="$:/library/sjcl.js" data-tiddler-type="application/javascript" type="text/javascript">"use strict";var sjcl={cipher:{},hash:{},keyexchange:{},mode:{},misc:{},codec:{},exception:{corrupt:function(a){this.toString=function(){return"CORRUPT: "+this.message};this.message=a},invalid:function(a){this.toString=function(){return"INVALID: "+this.message};this.message=a},bug:function(a){this.toString=function(){return"BUG: "+this.message};this.message=a},notReady:function(a){this.toString=function(){return"NOT READY: "+this.message};this.message=a}}};
 sjcl.cipher.aes=function(a){this.s[0][0][0]||this.O();var b,c,d,e,f=this.s[0][4],g=this.s[1];b=a.length;var h=1;if(4!==b&&6!==b&&8!==b)throw new sjcl.exception.invalid("invalid aes key size");this.b=[d=a.slice(0),e=[]];for(a=b;a<4*b+28;a++){c=d[a-1];if(0===a%b||8===b&&4===a%b)c=f[c>>>24]<<24^f[c>>16&255]<<16^f[c>>8&255]<<8^f[c&255],0===a%b&&(c=c<<8^c>>>24^h<<24,h=h<<1^283*(h>>7));d[a]=d[a-b]^c}for(b=0;a;b++,a--)c=d[b&3?a:a-4],e[b]=4>=a||4>b?c:g[0][f[c>>>24]]^g[1][f[c>>16&255]]^g[2][f[c>>8&255]]^g[3][f[c&
 255]]};
 sjcl.cipher.aes.prototype={encrypt:function(a){return t(this,a,0)},decrypt:function(a){return t(this,a,1)},s:[[[],[],[],[],[]],[[],[],[],[],[]]],O:function(){var a=this.s[0],b=this.s[1],c=a[4],d=b[4],e,f,g,h=[],k=[],l,n,m,p;for(e=0;0x100>e;e++)k[(h[e]=e<<1^283*(e>>7))^e]=e;for(f=g=0;!c[f];f^=l||1,g=k[g]||1)for(m=g^g<<1^g<<2^g<<3^g<<4,m=m>>8^m&255^99,c[f]=m,d[m]=f,n=h[e=h[l=h[f]]],p=0x1010101*n^0x10001*e^0x101*l^0x1010100*f,n=0x101*h[m]^0x1010100*m,e=0;4>e;e++)a[e][f]=n=n<<24^n>>>8,b[e][m]=p=p<<24^p>>>8;for(e=
@@ -12428,7 +12543,7 @@ b){var c={},d;for(d=0;d<b.length;d++)void 0!==a[b[d]]&&(c[b[d]]=a[b[d]]);return 
 </div>
 <!--~~ Boot kernel prologue ~~-->
 <div id="bootKernelPrefix" style="display:none;">
-<script data-tiddler-title="$:/boot/bootprefix.js" data-tiddler-type="application/javascript" data-tiddler-revision="0" data-tiddler-bag="default" type="text/javascript">/*\
+<script data-tiddler-bag="default" data-tiddler-revision="0" data-tiddler-title="$:/boot/bootprefix.js" data-tiddler-type="application/javascript" type="text/javascript">/*\
 title: $:/boot/bootprefix.js
 type: application/javascript
 
@@ -12551,7 +12666,7 @@ if(typeof(exports) === "undefined") {
 </div>
 <!--~~ Boot kernel ~~-->
 <div id="bootKernel" style="display:none;">
-<script data-tiddler-title="$:/boot/boot.js" data-tiddler-type="application/javascript" data-tiddler-revision="0" data-tiddler-bag="default" type="text/javascript">/*\
+<script data-tiddler-bag="default" data-tiddler-revision="0" data-tiddler-title="$:/boot/boot.js" data-tiddler-type="application/javascript" type="text/javascript">/*\
 title: $:/boot/boot.js
 type: application/javascript
 
